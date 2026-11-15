@@ -7,15 +7,15 @@ redirect_from:
   - /about.html
 ---
 
-<p class="home-lead">Wir müssen wissen, wir werden wissen</p>
+<p class="home-lead">Wir müssen wissen, wir werden wissen.</p>
 
 I am currently a year 1 MPhil student at [IMS, CUHK](http://www.ims.cuhk.edu.hk/). This website collects my mathematical notes, (future) papers, academic activities, and some travel writings.
 
 ## Explore
 
-- [Mathematical notes](/notes/).
-- [Publications](/publications/).
-- [Travels](/travel/).
+- [Mathematical notes](/notes/)
+- [Publications](/publications/)
+- [Travels](/travel/)
 - [Activities](/activities/): seminars and teaching.
 
 ## Contact
