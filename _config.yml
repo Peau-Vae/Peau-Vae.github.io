@@ -9,10 +9,10 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-title                    : "Your Name"
+title                    : "Fan Yundi"
 title_separator          : "—"
-name                     : &name "Your Name"
-description              : &description "Personal academic website of Your Name: mathematics, publications, notes, and travel."
+name                     : &name "Fan Yundi"
+description              : &description "Personal academic website of Fan Yundi: mathematics, publications, notes, and travel."
 url                      : "https://Peau-Vae.github.io"
 baseurl                  : ""
 repository               : "Peau-Vae/Peau-Vae.github.io"
@@ -22,14 +22,16 @@ repository               : "Peau-Vae/Peau-Vae.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Replace these placeholders with your own information.
-  avatar           : "profile.png"
-  name             : "Your Name"
+  avatar           : "profile.jpg"
+  name             : "Fan Yundi"
   pronouns         :
-  bio              : "Mathematics · Research · Notes"
-  location         : "Your City, Your Country"
-  employer         : "Your Institution"
+  bio              :
+  location         : "Hong Kong"
+  hometown         : "Shanghai"
+  employer         : "IMS, CUHK"
+  employer_url     : "http://www.ims.cuhk.edu.hk/"
   uri              :
-  email            : "1155191875@link.cuhk.edu.hk"
+  email            : "ydfan@math.cuhk.edu.hk"
 
   # Add profile URLs only when you want them displayed.
   academia         :
@@ -78,7 +80,7 @@ author:
   wikipedia        :
   xing             :
   youtube          :
-  zhihu            :
+  zhihu            : "hao_hai_zi"
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
