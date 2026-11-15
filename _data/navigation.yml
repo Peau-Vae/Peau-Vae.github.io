@@ -1,0 +1,16 @@
+# Main navigation. Add or remove entries here.
+main:
+  - title: "Notes"
+    url: /notes/
+
+  - title: "Publications"
+    url: /publications/
+
+  - title: "Travel"
+    url: /travel/
+
+  - title: "Activities"
+    url: /activities/
+
+  - title: "CV"
+    url: /cv/

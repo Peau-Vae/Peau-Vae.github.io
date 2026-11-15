@@ -1,0 +1,158 @@
+---
+---
+
+/*
+ * This file controls what is imported from /_sass
+ *
+ * Note that the files are processed in the order they are imported, so they are partly
+   sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
+ */
+
+@import
+    "vendor/breakpoint/breakpoint",
+
+    "themes",
+    "theme/default_light",
+    "theme/default_dark",
+
+    "include/mixins",
+    "vendor/susy/susy",
+
+    "layout/reset",
+    "layout/base",
+
+    "include/utilities",
+    "layout/tables",
+    "layout/buttons",
+    "layout/notices",
+    "layout/masthead",
+    "layout/navigation",
+    "layout/footer",
+    "syntax",
+
+    "layout/forms",
+
+    "layout/page",
+    "layout/archive",
+    "layout/sidebar"
+;
+
+/* Personal academic site: quiet editorial palette and readable typography. */
+:root {
+  --primitive-navy-900: oklch(0.302 0.073 254);
+  --primitive-navy-650: oklch(0.46 0.045 254);
+  --primitive-neutral-100: oklch(0.954 0 0);
+  --primitive-neutral-200: oklch(0.913 0.003 254);
+  --primitive-neutral-300: oklch(0.84 0.005 254);
+
+  --semantic-background: var(--primitive-neutral-100);
+  --semantic-text: var(--primitive-navy-900);
+  --semantic-muted: var(--primitive-navy-650);
+  --semantic-border: var(--primitive-neutral-300);
+
+  --global-bg-color: var(--semantic-background);
+  --global-footer-bg-color: var(--primitive-neutral-200);
+  --global-text-color: var(--semantic-text);
+  --global-text-color-light: var(--semantic-muted);
+  --global-link-color: var(--semantic-text);
+  --global-link-color-hover: var(--semantic-muted);
+  --global-link-color-visited: var(--semantic-text);
+  --global-masthead-link-color: var(--semantic-text);
+  --global-masthead-link-color-hover: var(--semantic-muted);
+  --global-border-color: var(--semantic-border);
+  --global-dark-border-color: var(--semantic-muted);
+}
+
+body {
+  font-family: "Noto Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+#main,
+.page__hero {
+  animation: none;
+}
+
+h1, h2, h3, h4, h5, h6,
+.masthead__menu-item--lg,
+.archive__item-title {
+  font-family: "Marcellus", Georgia, serif;
+  font-weight: 400;
+}
+
+.page__title {
+  font-size: 2.5rem;
+  letter-spacing: -0.02em;
+}
+
+.page__content,
+.archive {
+  max-width: 72ch;
+}
+
+.page__content p,
+.page__content li,
+.archive p,
+.archive li {
+  line-height: 1.7;
+}
+
+.home-lead {
+  max-width: 28ch;
+  margin-bottom: 1.25em;
+  font-family: "Marcellus", Georgia, serif;
+  font-size: clamp(1.55rem, 3vw, 2rem);
+  line-height: 1.4;
+}
+
+.page-intro {
+  max-width: 65ch;
+  margin-bottom: 2rem;
+  color: var(--global-text-color-light);
+}
+
+.archive__item {
+  padding-block: 0.5rem 1.25rem;
+  border-bottom: 1px solid var(--global-border-color);
+}
+
+.archive__item-title {
+  margin-top: 0.75rem;
+}
+
+.masthead__menu-item > a,
+.masthead button,
+.author__urls-wrapper button {
+  min-height: 44px;
+}
+
+.masthead__menu-item > a {
+  display: flex;
+  align-items: center;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--global-link-color);
+  outline-offset: 3px;
+}
+
+.author__avatar img {
+  filter: grayscale(1);
+}
+
+.author__urls .author__desktop {
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

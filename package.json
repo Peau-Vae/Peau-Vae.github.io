@@ -1,0 +1,43 @@
+{
+  "name": "academic-pages",
+  "version": "0.8.1.1",
+  "description": "Academic Pages Mistakes Jekyll theme npm build scripts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/academicpages/academicpages.github.io"
+  },
+  "keywords": [
+    "jekyll",
+    "theme",
+    "minimal"
+  ],
+  "contributors": [
+    "Michael Rose",
+    "Robert Zupko"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/academicpages/academicpages.github.io/issues"
+  },
+  "homepage": "https://github.com/academicpages/academicpages.github.io",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "dependencies": {
+    "jquery": "^3.7.1",
+    "plotly.js-dist-min": "^3.6.0"
+  },
+  "devDependencies": {
+    "jslint": "^0.12.1",
+    "onchange": "^7.1.0",
+    "sass": "^1.108.2",
+    "uglify-js": "^3.19.3"
+  },
+  "scripts": {
+    "build": "npm run build:css && npm run build:js && JEKYLL_NO_BUNDLER_REQUIRE=1 jekyll build --config _config.yml,_config_preview.yml --destination dist && cp dist/index.html index.html",
+    "build:css": "tail -n +3 assets/css/main.scss | sass --stdin --load-path=_sass --style=compressed > assets/css/main.css",
+    "uglify": "uglifyjs assets/js/plugins/jquery.greedy-navigation.js assets/js/_main.js assets/js/theme.js -c -m -o assets/js/main.min.js",
+    "watch:js": "onchange \"assets/js/**/*.js\" -e \"assets/js/main.min.js\" -- npm run build:js",
+    "build:js": "npm run uglify"
+  }
+}
