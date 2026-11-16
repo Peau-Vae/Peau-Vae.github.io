@@ -45,6 +45,15 @@
 | Fuzhou（一个帖子含三份 PDF：闽江夜色、石厝教堂前的卖柑人、乌山） | `_portfolio/2025-02-01-fuzhou.md` | `files/travel/fuzhou-minjiang-night-2025-02-01.pdf`、`files/travel/fuzhou-orange-seller-stone-church-2025-02-01.pdf`、`files/travel/fuzhou-wu-hill-2025-02-01.pdf` |
 | Lai Chi Wo | `_portfolio/2025-02-23-lai-chi-wo.md` | `files/travel/lai-chi-wo-2025-02-23.pdf` |
 | Kaiping: A Journey Out of Order | `_portfolio/2025-10-06-kaiping.md` | `files/travel/kaiping-2025-10-06.pdf`（约 65 MB，原始质量直接发布） |
+
+Activities 现有两个讨论班帖子，PDF 位于 `files/activities/`，后续添加时不要删除：
+
+| 标题 | Markdown 条目 | PDF |
+|---|---|---|
+| Heat Kernel and Dirac Operator Seminar | `_talks/2026-05-18-heat-kernel-dirac-operator-seminar.md` | `files/activities/heat-kernel-local-index-seminar-poster.pdf`、`heat-kernel-seminar-iii-clifford-module-dirac-operator.pdf`、`heat-kernel-seminar-vi-equivariant-local-index.pdf` |
+| Spectral Sequence Seminar | `_talks/2026-08-01-spectral-sequence-seminar.md` | `files/activities/spectral-sequence-seminar-iii-morse-homology.pdf` |
+
+Teaching 页面当前内容：2026 Spring, TA of MMAT5350 Coding Theory。
 - 首页 Explore 链接仍然保留，指向上述页面和 Notes。
 
 顶部导航固定为五项：
@@ -55,6 +64,7 @@
 | Publications | `_pages/publications.html` | `_publications/` |
 | Travel | `_pages/portfolio.html` | `_portfolio/` |
 | Activities | `_pages/talks.html` | `_talks/` |
+| Teaching | `_pages/teaching.md` | 直接编辑该页面（普通文字页面，不用帖文模式） |
 | CV | `_pages/cv.md` | 直接编辑该页面 |
 
 当前 Notes 有六份 PDF。后续添加内容时不要删除它们：

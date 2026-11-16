@@ -16,7 +16,8 @@ I am currently a year 1 MPhil student at [IMS, CUHK](http://www.ims.cuhk.edu.hk/
 - [Mathematical notes](/notes/)
 - [Publications](/publications/)
 - [Travels](/travel/)
-- [Activities](/activities/): seminars and teaching.
+- [Activities](/activities/)
+- [Teaching](/teaching/)
 
 ## Contact
 
