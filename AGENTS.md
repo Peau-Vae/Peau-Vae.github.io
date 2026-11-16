@@ -33,7 +33,15 @@
 - 知乎：https://www.zhihu.com/people/hao_hai_zi
 - 头像：`images/profile.jpg`，应保持彩色。不要重新加入 `filter: grayscale(...)`。
 - 名字下方的旧 bio 已按用户要求删除，不要自行补回。
-- Publications、Travel、Activities、CV 当前只有页面标题，没有正文或条目。这是用户要求的“清空”，不是构建失败。
+- Publications、Activities、CV 当前只有页面标题，没有正文或条目。这是用户要求的“清空”，不是构建失败。
+- Travel 现有四篇游记（原始 PDF 直接发布，未经降质，位于 `files/travel/`），后续添加内容时不要删除：
+
+| 标题 | Markdown 条目 | PDF |
+|---|---|---|
+| Yuen Long: Shap Pat Heung and Pat Heung | `_portfolio/2024-12-20-yuen-long-shap-pat-heung.md` | `files/travel/yuen-long-shap-pat-heung-pat-heung-2024-12-20.pdf` |
+| Yuen Long: Tai Tong and Tung Shing Lei | `_portfolio/2024-12-23-yuen-long-tai-tong.md` | `files/travel/yuen-long-tai-tong-tung-shing-lei-2024-12-23.pdf` |
+| Tai Po: Tai Mei Tuk | `_portfolio/2024-12-25-tai-po-tai-mei-tuk.md` | `files/travel/tai-po-tai-mei-tuk-2024-12-25.pdf` |
+| Tai Po: Lam Tsuen | `_portfolio/2025-01-25-tai-po-lam-tsuen.md` | `files/travel/tai-po-lam-tsuen-2025-01-25.pdf` |
 - 首页 Explore 链接仍然保留，指向上述页面和 Notes。
 
 顶部导航固定为五项：
@@ -259,7 +267,7 @@ gh release upload "large-files" \
 - PDF 链接返回 HTTP 200；
 - 直接存放在 Pages 的 PDF 返回 `Content-Type: application/pdf`；
 - PDF 的 `Content-Length` 与本地文件大小一致；
-- Publications、Travel、Activities、CV 仍保持用户要求的空白状态，除非本轮明确要求添加内容；
+- Publications、Activities、CV 仍保持用户要求的空白状态，Travel 保留现有四篇游记，除非本轮明确要求增删；
 - 桌面约 1440px 和手机约 375px 均无横向溢出；
 - 浏览器控制台无错误；
 - 头像保持彩色且能正常加载。
