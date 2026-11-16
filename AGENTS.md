@@ -42,6 +42,9 @@
 | Yuen Long: Tai Tong and Tung Shing Lei | `_portfolio/2024-12-23-yuen-long-tai-tong.md` | `files/travel/yuen-long-tai-tong-tung-shing-lei-2024-12-23.pdf` |
 | Tai Po: Tai Mei Tuk | `_portfolio/2024-12-25-tai-po-tai-mei-tuk.md` | `files/travel/tai-po-tai-mei-tuk-2024-12-25.pdf` |
 | Tai Po: Lam Tsuen | `_portfolio/2025-01-25-tai-po-lam-tsuen.md` | `files/travel/tai-po-lam-tsuen-2025-01-25.pdf` |
+| Fuzhou（一个帖子含三份 PDF：闽江夜色、石厝教堂前的卖柑人、乌山） | `_portfolio/2025-02-01-fuzhou.md` | `files/travel/fuzhou-minjiang-night-2025-02-01.pdf`、`files/travel/fuzhou-orange-seller-stone-church-2025-02-01.pdf`、`files/travel/fuzhou-wu-hill-2025-02-01.pdf` |
+| Lai Chi Wo | `_portfolio/2025-02-23-lai-chi-wo.md` | `files/travel/lai-chi-wo-2025-02-23.pdf` |
+| Kaiping: A Journey Out of Order | `_portfolio/2025-10-06-kaiping.md` | `files/travel/kaiping-2025-10-06.pdf`（约 65 MB，原始质量直接发布） |
 - 首页 Explore 链接仍然保留，指向上述页面和 Notes。
 
 顶部导航固定为五项：
