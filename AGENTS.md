@@ -53,6 +53,8 @@ Activities 现有两个讨论班帖子，PDF 位于 `files/activities/`，后续
 | Heat Kernel and Dirac Operator Seminar | `_talks/2026-05-18-heat-kernel-dirac-operator-seminar.md` | `files/activities/heat-kernel-local-index-seminar-poster.pdf`、`heat-kernel-seminar-iii-clifford-module-dirac-operator.pdf`、`heat-kernel-seminar-vi-equivariant-local-index.pdf` |
 | Spectral Sequence Seminar | `_talks/2026-08-01-spectral-sequence-seminar.md` | `files/activities/spectral-sequence-seminar-iii-morse-homology.pdf` |
 
+| UGEA2330 China's Cultural Heritage: Course Essays（一个帖子含五份 PDF：三次 field trip 反思、group project、期末论文） | `_portfolio/2026-04-14-ugea2330-chinas-cultural-heritage.md` | `files/travel/ugea2330-hw1-field-trip-reflection.pdf`、`ugea2330-hw2-field-trip-reflection.pdf`、`ugea2330-hw3-field-trip-reflection.pdf`、`ugea2330-group-project.pdf`、`ugea2330-final-paper.pdf` |
+
 Teaching 页面当前内容：2026 Spring, TA of MMAT5350 Coding Theory。
 - 首页 Explore 链接仍然保留，指向上述页面和 Notes。
 
