@@ -17,6 +17,7 @@
 
 ## 2. 开始任何修改前必须做的事
 
+0. 沙盒可能已被整体重置：`gh`、登录凭据、`/tmp` 下的 clone、`node_modules`、Jekyll 都可能丢失；只有 `/mnt/agents` 持久。不要假设上一轮装好的工具还在，按需重装（见第 8、10 节）。
 1. 重新检查 `/mnt/agents/output/app`、用户上传目录和远端 `master`，不要依赖旧的文件列表或旧 commit。
 2. 用户上传文件通常位于 `/mnt/agents/temp/`；项目共享文件可能位于 `/mnt/agents/upload/`。文件名可能含空格，命令中必须正确引用路径。
 3. 远端仓库是部署事实来源。用户可能直接在 GitHub 网页上修改文件，尤其是 `_pages/about.md`。
@@ -315,6 +316,22 @@ python3 -m http.server 4000
 
 6. 当前授权通常只有 `repo` 等 scope，没有 `workflow`。不要上传 `.github/workflows`，也不要为此索取更大权限；继续使用 Pages legacy 原生构建。
 7. 日志和回复中不得显示访问 token。设备 code 可以临时提供给用户用于授权，但不要写入仓库。
+8. **`gh` 不可用时的等价方案（沙盒重置后常见）**：`gh` 的安装包较大，直接下载常被网络截断；可改用 GitHub 官方 OAuth device flow 的原生 HTTP 接口，无需安装任何软件：
+
+   ```bash
+   # 1. 申请设备码（client_id 是 GitHub CLI 的公开标识）
+   curl -s -X POST -H "Accept: application/json" \
+     -d "client_id=178c6fc778ccc68e1d6a&scope=repo gist" \
+     https://github.com/login/device/code
+   # 把返回的 user_code 和 https://github.com/login/device 发给用户，等待确认
+
+   # 2. 每 6 秒轮询一次，直到返回 access_token
+   curl -s -X POST -H "Accept: application/json" \
+     -d "client_id=178c6fc778ccc68e1d6a&device_code=<DEVICE_CODE>&grant_type=urn:ietf:params:oauth:grant-type:device_code" \
+     https://github.com/oauth/access_token
+   ```
+
+   授权后令牌可用于 git 操作（`https://x-access-token:<TOKEN>@github.com/...`）和 API 轮询（`Authorization: Bearer <TOKEN>`）。令牌只存临时文件（如 `/tmp/.ghtoken`，chmod 600），不写入仓库、回复或本文件；本轮任务结束后不再使用。
 
 ## 11. 部署流程
 
@@ -327,12 +344,17 @@ python3 -m http.server 4000
      /tmp/homepage-deploy
    ```
 
-2. 只复制本轮有意修改的源文件和静态文件，检查：
+2. 只复制本轮有意修改的源文件和静态文件。注意：
+   - 先 `git log origin/master -3` 看用户是否有新的直接提交，如有，阅读其改动并保留，不要拿本地旧副本覆盖。
+   - 复制 PDF 等大文件后，必须逐文件核对大小再 `git add`：
 
    ```bash
+   stat -c "%s" 源文件 目标文件   # 两者必须一致，必要时 md5sum
    git -C /tmp/homepage-deploy status --short
    git -C /tmp/homepage-deploy diff
    ```
+
+   复制命令超时中断会产生截断文件；任何超时后都要重新核对，不要默认成功。涉及大文件的操作把命令 timeout 调到 300 秒以上。
 
 3. 不要误提交 `node_modules`、`dist`、本地缓存、授权日志或临时截图。
 4. 提交信息使用简短英文，例如：
@@ -376,8 +398,10 @@ Kimi 预览版本与 GitHub Pages 正式部署是两套机制。保存预览版�
 
 ## 13. 常见网络问题
 
-- GitHub clone/push 偶发 TLS handshake 错误：使用 HTTP/1.1，有限次数重试。
+- GitHub clone/push 偶发 TLS handshake 错误：使用 HTTP/1.1，耐心重试 10 次左右、间隔 15–20 秒；这是网络抖动，通常重试数次即成功，不要一次失败就判定受阻。
+- 大文件下载（如 gh 安装包）常被网络截断在几 MB：用 HTTP Range 分小块下载再拼接。
 - `gh auth login` 获取 device code 偶发超时或 EOF：持续重试，但一旦显示验证码，就让该进程继续等待用户确认。
+- 线上验收时 curl 偶发超时（返回 000）：加 `--max-time 90` 重试 2–3 次再下结论。
 - GitHub Pages 刚 push 后返回旧内容：先检查 latest build 的 commit 和状态，不要立即重复推送。
 - 截图等待外部字体可能超时：这不自动等于网站失败，应分别检查正文、资源、控制台和实际链接。
 
@@ -394,7 +418,8 @@ Kimi 预览版本与 GitHub Pages 正式部署是两套机制。保存预览版�
 ## 15. 最重要的十条禁令
 
 1. 不要索取密码或访问 token。
-2. 不要强推覆盖用户在 GitHub 上的新修改。
+2. 不要强推覆盖用户在 GitHub 上的新修改；也不要拿本地旧副本覆盖用户刚在网页上改过的文件（部署 clone 时只复制本轮目标文件）。
+11. 不要在不核对文件大小的情况下提交大文件：复制截断的 PDF 曾造成线上文件不完整，必须 `stat -c %s"`（必要时 `md5sum`）核对后再提交。
 3. 不要损害图片或 PDF 画质。
 4. 不要把大文件有损压缩当成默认解决方案。
 5. 不要恢复模板示例或空白页面的旧占位文字。
