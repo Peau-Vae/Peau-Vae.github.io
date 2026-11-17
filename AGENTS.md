@@ -55,7 +55,7 @@ Activities 现有两个讨论班帖子，PDF 位于 `files/activities/`，后续
 
 | UGEA2330 China's Cultural Heritage: Course Essays（一个帖子含五份 PDF：三次 field trip 反思、group project、期末论文） | `_portfolio/2026-04-14-ugea2330-chinas-cultural-heritage.md` | `files/travel/ugea2330-hw1-field-trip-reflection.pdf`、`ugea2330-hw2-field-trip-reflection.pdf`、`ugea2330-hw3-field-trip-reflection.pdf`、`ugea2330-group-project.pdf`、`ugea2330-final-paper.pdf` |
 
-Teaching 页面当前内容：2026 Spring, TA of MMAT5350 Coding Theory。
+Teaching 页面当前内容：2026 Autumn, TA of MMAT5350 Coding Theory.（用户曾直接在 GitHub 将 Spring 改为 Autumn，以远端为准。）
 - 首页 Explore 链接仍然保留，指向上述页面和 Notes。
 
 顶部导航固定为五项：
