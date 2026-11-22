@@ -70,10 +70,11 @@ Teaching 页面当前内容：2026 Autumn, TA of MMAT5350 Coding Theory.（用�
 | Teaching | `_pages/teaching.md` | 直接编辑该页面（普通文字页面，不用帖文模式） |
 | CV | `_pages/cv.md` | 直接编辑该页面 |
 
-当前 Notes 有六份 PDF。后续添加内容时不要删除它们：
+当前 Notes 有七份内容（含一份含 7 个 PDF 的帖文）。后续添加内容时不要删除它们：
 
 | 标题 | Markdown 条目 | PDF |
 |---|---|---|
+| Floer Cohomology（lecture notes 1–8，其中 Lecture 1–2 合一份 PDF，帖文含 Lecture 1–6 的手写要点转录） | `_posts/2026-11-22-floer-cohomology.md` | `files/notes/floer-cohomology-lec-1-2.pdf` … `floer-cohomology-lec-8.pdf`（共 7 份，185,947,079 字节） |
 | Geometric Quantization | `_posts/2026-06-17-geometric-quantization.md` | `files/notes/geometric-quantization.pdf` |
 | MATH4080 Modules and Group Representation | `_posts/2026-05-03-math4080-modules-and-group-representation.md` | `files/notes/math4080-modules-and-group-representation.pdf` |
 | MATH5051 Abstract Algebra I: Commutative Algebra Notes | `_posts/2026-02-11-math5051-commutative-algebra-notes.md` | `files/notes/math5051-commutative-algebra-notes.pdf` |
