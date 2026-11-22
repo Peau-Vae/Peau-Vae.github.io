@@ -333,6 +333,7 @@ python3 -m http.server 4000
    ```
 
    授权后令牌可用于 git 操作（`https://x-access-token:<TOKEN>@github.com/...`）和 API 轮询（`Authorization: Bearer <TOKEN>`）。令牌只存临时文件（如 `/tmp/.ghtoken`，chmod 600），不写入仓库、回复或本文件；本轮任务结束后不再使用。
+9. **`/oauth/access_token` 端点故障时的最终备选（已实际发生）**：若 `login/device/code` 正常、`api.github.com` 和 git 通道都正常，但 `github.com/oauth/access_token` 持续返回 422 错误页或连接重置（用户已在浏览器确认授权也拿不到 token），改为请用户创建 fine-grained Personal Access Token：https://github.com/settings/personal-access-tokens/new ，只勾选本仓库、Contents 设为 Read and write。向用户解释：不要账号密码（GitHub 已不支持密码推送，密码也不应进入聊天），token 可随时在 settings 里作废。拿到后按第 8 条的同样方式用于 git 与 API；部署验收完成后提醒用户立即删除该 token。
 
 ## 11. 部署流程
 
