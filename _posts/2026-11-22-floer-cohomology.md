@@ -1,7 +1,7 @@
 ---
 title: "Floer Cohomology"
 date: 2026-11-22
-excerpt: "Notes on Lagrangian Floer cohomology: Hamiltonian dynamics and Lagrangian submanifolds, the Novikov complex, pseudoholomorphic curves and compactness, the Floer moduli spaces, invariance of HF under Hamiltonian isotopy, and index and orientation theory. [Lecture 1–2](/files/notes/floer-cohomology-lec-1-2.pdf), [3](/files/notes/floer-cohomology-lec-3.pdf), [4](/files/notes/floer-cohomology-lec-4.pdf), [5](/files/notes/floer-cohomology-lec-5.pdf), [6](/files/notes/floer-cohomology-lec-6.pdf), [7](/files/notes/floer-cohomology-lec-7.pdf), [8](/files/notes/floer-cohomology-lec-8.pdf)."
+excerpt: "Notes on Lagrangian Floer Cohomology, taught by Prof. Kaoru Ono. [Lecture 1–2](/files/notes/floer-cohomology-lec-1-2.pdf), [3](/files/notes/floer-cohomology-lec-3.pdf), [4](/files/notes/floer-cohomology-lec-4.pdf), [5](/files/notes/floer-cohomology-lec-5.pdf), [6](/files/notes/floer-cohomology-lec-6.pdf), [7](/files/notes/floer-cohomology-lec-7.pdf), [8](/files/notes/floer-cohomology-lec-8.pdf)."
 ---
 
 Notes on Lagrangian Floer cohomology, with a summary of each lecture.
